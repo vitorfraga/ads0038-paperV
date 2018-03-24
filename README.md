@@ -1,19 +1,13 @@
-# ads0038-paperV
+# Paper V - Self-service Analytics
 Este repositório é dedicado para inserção de códigos do Paper V.
 
-##PLANO DE DESENVOLVIMENTO DA PRÁTICA
-Self-service Analytics
+Desenvolvedores
 
-Angelo Camboim
-Fernando Almeida
-Gabriela Dias
-Maria Clara
-Vitor Augusto Fraga
-Tutor(a) Externo(a) (Não lembro o nome do Prof)
-Centro Universitário Leonardo da Vinci – UNIASSELVI
-Análise e Desenvolvimento de Sistemas (ADS0038) – Seminário Interdisciplinar
-26/03/18
-
+    Angelo Camboim
+    Fernando Almeida
+    Gabriela Dias
+    Maria Clara
+    Vitor Augusto Fraga
 
 1 TEMA/ASSUNTO
 
@@ -21,7 +15,7 @@ O assunto abordado terá como ênfase análise de dados. O nosso desafio será d
 
 2 OBJETIVOS 
 
-O primeiro objetivo é realizar a carga de dados através de um CSV. 
-O segundo objetivo é transformar estes dados de forma simples, retirar colunas por exemplo. 
-O terceiro é montar de forma automática uma Dashboard.
-
+ - O primeiro objetivo é realizar a carga de dados através de um CSV.  
+ - O   segundo objetivo é transformar estes dados de forma simples, retirar
+   colunas por exemplo.  
+ - O terceiro é montar de forma automática uma  Dashboard.
