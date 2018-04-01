@@ -13,7 +13,7 @@ Desenvolvedores
 
 O assunto abordado terá como ênfase análise de dados. O nosso desafio será desenvolver uma aplicação WEB onde os usuários poderão fazer self-service Analytics, ou seja, uma aplicação que ajude profissionais a analisar seus dados de forma resumida e rápida.
 
-2 OBJETIVOS 
+# 2 OBJETIVOS 
 
  - O primeiro objetivo é realizar a carga de dados através de um CSV.  
  - O   segundo objetivo é transformar estes dados de forma simples, retirar
@@ -22,8 +22,8 @@ O assunto abordado terá como ênfase análise de dados. O nosso desafio será d
 
 # Tecnologias
 
-Banco de dados  - PostgreSQL
-Back-End - PHP com Slim Framework -> https://www.slimframework.com/
+Banco de dados  - PostgreSQL 
+Back-End - PHP com Slim Framework -> https://www.slimframework.com/ 
 Front-End - HTML, CSS, Javascript com AngularJS * Precisamos escolher um Framework para construir nosso visual. -> https://angularjs.org/
 
 Servidor - Apache ou Nginx
