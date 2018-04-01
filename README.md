@@ -22,9 +22,9 @@ O assunto abordado terá como ênfase análise de dados. O nosso desafio será d
 
 # Tecnologias
 
-Banco de dados  - PostgreSQL 
-Back-End - PHP com Slim Framework -> https://www.slimframework.com/ 
-Front-End - HTML, CSS, Javascript com AngularJS * Precisamos escolher um Framework para construir nosso visual. -> https://angularjs.org/
+<p>Banco de dados  - PostgreSQL</p> 
+<p>Back-End - PHP com Slim Framework -> https://www.slimframework.com/ </p> 
+<p>Front-End - HTML, CSS, Javascript com AngularJS * Precisamos escolher um Framework para construir nosso visual. -> https://angularjs.org/ </p>
 
 Servidor - Apache ou Nginx
 
