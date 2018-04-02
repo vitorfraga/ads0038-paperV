@@ -29,8 +29,12 @@ O assunto abordado terá como ênfase análise de dados. O nosso desafio será d
 Servidor - Apache ou Nginx
 
 # Modelagem de banco de dados 
- <p>A modelagem de banco de dados esta bastante simples, porém contém tudo aquilo que vamos precisar para o desenvolvimento do sistema.</p>
+<p>A modelagem de banco de dados esta bastante simples, porém contém tudo aquilo que vamos precisar para o desenvolvimento do sistema.</p>
 <img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/DER/der.PNG">
+
+# Diagrama de casos de uso 
+<p>Diagrama de casos de uso que demonstra o que o usuário poderá fazer na primeira versão do sistema.</p>
+<img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/DER/casos de uso.PNG">
 
 
 
