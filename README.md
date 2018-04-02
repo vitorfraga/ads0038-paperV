@@ -38,6 +38,7 @@ Servidor - Apache ou Nginx
 
 # API (Application Programming Interface)
 <p>Nosso sistema seguirá uma metodologia que se chama API FIRST, ou seja, a API será desenvolvida antes de tudo, pois ela que fornecerá todo o conjunto de operações necessárias para que o Front-End consiga alimentar o usuário, Mas o que esta API deverá fazer? </p>
+
 - [] - Cadastrar um usuário
 - [] - Alterar os dados cadastrais de um usuário
 - [] - Realizar Login
