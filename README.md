@@ -34,7 +34,7 @@ Servidor - Apache ou Nginx
 
 # Diagrama de casos de uso 
 <p>Diagrama de casos de uso que demonstra o que o usuário poderá fazer na primeira versão do sistema.</p>
-<img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/DER/casos de uso.PNG">
+<img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/Casos%20de%20uso/casos%20de%20uso.png">
 
 
 
