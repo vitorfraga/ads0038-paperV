@@ -36,6 +36,12 @@ Servidor - Apache ou Nginx
 <p>Diagrama de casos de uso que demonstra o que o usuário poderá fazer na primeira versão do sistema.</p>
 <img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/Casos%20de%20uso/casos%20de%20uso.png">
 
-
+# API (Application Programming Interface)
+<p>Nosso sistema seguirá uma metodologia que se chama API FIRST, ou seja, a API será desenvolvida antes de tudo, pois ela que fornecerá todo o conjunto de operações necessárias para que o Front-End consiga alimentar o usuário, Mas o que esta API deverá fazer? </p>
+- [] - Cadastrar um usuário
+- [] - Alterar os dados cadastrais de um usuário
+- [] - Realizar Login
+- [] - Realizar o Logoff
+ 
 
 
