@@ -39,10 +39,14 @@ Servidor - Apache ou Nginx
 # API (Application Programming Interface)
 <p>Nosso sistema seguirá uma metodologia que se chama API FIRST, ou seja, a API será desenvolvida antes de tudo, pois ela que fornecerá todo o conjunto de operações necessárias para que o Front-End consiga alimentar o usuário, Mas o que esta API deverá fazer? </p>
 
-- [] - Cadastrar um usuário
-- [] - Alterar os dados cadastrais de um usuário
-- [] - Realizar Login
-- [] - Realizar o Logoff
+- [ ] - Cadastrar um usuário
+- [ ] - Alterar os dados cadastrais de um usuário
+- [ ] - Realizar Login
+- [ ] - Realizar o Logoff
+- [ ] - Realizar o upload de um Dataframe (CSV)
+- [ ] - Buscas os metadados de um Dataframe, ou seja, listar as colunas e seus tipos de dados(String, Integer, Number, Date)
+- [ ] - Deletar um Dataframe (CSV)
+- [ ] - Realizar um "summarize" dos dados, ou seja, quantidade de linhas, quantidade de colunas.
+- [ ] - Gerar Dashboard
+- [ ] - Listar todos os Dataframes de um usuário
  
-
-
