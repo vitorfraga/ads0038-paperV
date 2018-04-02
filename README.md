@@ -20,7 +20,7 @@ O assunto abordado terá como ênfase análise de dados. O nosso desafio será d
    colunas por exemplo.  
  - O terceiro é montar de forma automática uma  Dashboard.
 
-# Tecnologias
+# 3 Tecnologias
 
 <p>Banco de dados  - PostgreSQL</p> 
 <p>Back-End - PHP com Slim Framework -> https://www.slimframework.com/ </p> 
@@ -28,15 +28,15 @@ O assunto abordado terá como ênfase análise de dados. O nosso desafio será d
 
 Servidor - Apache ou Nginx
 
-# Modelagem de banco de dados 
+# 4 Modelagem de banco de dados 
 <p>A modelagem de banco de dados esta bastante simples, porém contém tudo aquilo que vamos precisar para o desenvolvimento do sistema.</p>
 <img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/DER/der.PNG">
 
-# Diagrama de casos de uso 
+# 5 Diagrama de casos de uso 
 <p>Diagrama de casos de uso que demonstra o que o usuário poderá fazer na primeira versão do sistema.</p>
 <img src="https://github.com/vitorfraga/ads0038-paperV/blob/master/Casos%20de%20uso/casos%20de%20uso.png">
 
-# API (Application Programming Interface)
+# 6 API (Application Programming Interface)
 <p>Nosso sistema seguirá uma metodologia que se chama API FIRST, ou seja, a API será desenvolvida antes de tudo, pois ela que fornecerá todo o conjunto de operações necessárias para que o Front-End consiga alimentar o usuário, Mas o que esta API deverá fazer? </p>
 
 - [ ] Cadastrar um usuário
@@ -50,7 +50,7 @@ Servidor - Apache ou Nginx
 - [ ] Gerar Dashboard
 - [ ] Listar todos os Dataframes de um usuário
 
-# UI (User Interface)
+# 7 UI (User Interface)
 <p>Neste sessão é listado todas as interfaces necessárias para o sistema</p>
 
 - [ ] Interface para cadastrar um usuário com os campos de (name, email, password)
