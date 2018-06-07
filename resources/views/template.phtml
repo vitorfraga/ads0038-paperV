@@ -1,51 +1,19 @@
-<html lang="pt-br">
-<head>
-  <title>Bem - vindo à Analitec</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/CSS" href="assets/estilo.css">
-</head>
-<body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Analitec</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="QuemSomos.html">Quem somos</a></li>
-      <li><a href="Contato.html">Contato</a></li>
-    </ul>
-	<ul class="nav navbar-nav navbar-right">
-      <li><a href="cadastro.html"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-  </div>
-</nav>
-  <div class="corpo preto">
-	<div class="conteudo">
-		<div class="slide">
-			<img src="./img/imagem1.JPEG" alt="Imagem 1" title="Imagem 1" class="slideImagem">
-			<img src="./img/imagem2.PNG" alt="Imagem 2" title="Imagem 2" class="slideImagem">
-			<img src="./img/imagem3.jpg" alt="Imagem 3" title="Imagem 3" class="slideImagem">
-		    <img src="./img/imagem4.jpg" alt="Imagem 4" title="Imagem 4" class="slideImagem">
-		</div>
-	</div>
-  </div>
-  
-<div class="corpo">
-	<br /><br /><br /><br /><br />
-  <center><h2>Bem - vindo(a) à Analitec!</h2></center>
-</div>
-<div class="texto_index" style="font-size: large">
-	<br /><br />
-	<center><p> Faça seu cadastro e conheça nossa ferramenta para análise de dados!</center>
-	
-</div>
-</body>
-</html>
+<?=include('inc/header.phtml') ?>
+	<?php 
+		error_reporting(E_ALL);
+		if(isset($page)){
+
+			include('pages/'. $page.'phtml');
+			echo $page;
+
+		}else{
+			
+
+		}
+
+
+	 ?>
+
+<?=include('inc/footer.phtml') ?>
+

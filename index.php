@@ -10,18 +10,19 @@ $container = $app->getContainer();
 
 $container['view'] = new \Slim\Views\PhpRenderer('resources/views/');
 
-$app->get('/', function ($request, $response) {
+// $app->get('/', function ($request, $response) {
 
-    $response = $this->view->render($response, 'template.phtml');
+//     $response = $this->view->render($response, 'template.phtml');
 
-    return $response;
-});
+//     return $response;
+// });
 
 
 // Exemplo de rota que recebe as variáveis
-$app->get('/{nome}', function ($request, $response) {
+$app->get('/', function ($request, $response) {
 
 	$nome = $request->getAttribute('nome');
+	$vars['page'] = 'home';
     $response = $this->view->render($response, 'template.phtml', $vars);
 
     return $response;
