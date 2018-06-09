@@ -1,11 +1,11 @@
 
-<?=include('inc/header.phtml') ?>
+<?=include_once"inc/header.phtml" ?>
 	<?php 
 		error_reporting(E_ALL);
 		if(isset($page)){
-
-			include('pages/'. $page.'phtml');
-			echo $page;
+			
+			include_once "pages/".$page.".phtml";
+			
 
 		}else{
 			
@@ -15,5 +15,5 @@
 
 	 ?>
 
-<?=include('inc/footer.phtml') ?>
+<?=include_once"inc/footer.phtml" ?>
 

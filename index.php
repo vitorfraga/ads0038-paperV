@@ -28,6 +28,51 @@ $app->get('/', function ($request, $response) {
     return $response;
 });
 
+$app->get('/contato', function ($request, $response) {
+
+	$nome = $request->getAttribute('nome');
+	$vars['page'] = 'contato';
+    $response = $this->view->render($response, 'template.phtml', $vars);
+
+    return $response;
+});
+
+$app->get('/login', function ($request, $response) {
+
+	$nome = $request->getAttribute('nome');
+	$vars['page'] = 'login';
+    $response = $this->view->render($response, 'template.phtml', $vars);
+
+    return $response;
+});
+
+$app->get('/meusarquivos', function ($request, $response) {
+
+	$nome = $request->getAttribute('nome');
+	$vars['page'] = 'meusarquivos';
+    $response = $this->view->render($response, 'template.phtml', $vars);
+
+    return $response;
+});
+
+$app->get('/quemsomos', function ($request, $response) {
+
+	$nome = $request->getAttribute('nome');
+	$vars['page'] = 'quemsomos';
+    $response = $this->view->render($response, 'template.phtml', $vars);
+
+    return $response;
+});
+
+$app->get('/cadastro', function ($request, $response) {
+
+	$nome = $request->getAttribute('nome');
+	$vars['page'] = 'cadastro';
+    $response = $this->view->render($response, 'template.phtml', $vars);
+
+    return $response;
+});
+
 
 $app->run();
 
