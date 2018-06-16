@@ -4,7 +4,12 @@
 
 // Administração
 
-$app->get('/admin', 'App\Action\Admin\HomeAction:index');
+$app->get('/admin/login', 'App\Action\Admin\LoginAction:index');
+$app->post('/admin/login', 'App\Action\Admin\LoginAction:logar');
+$app->get('/admin/logout', 'App\Action\Admin\LoginAction:logout');
+
+
+$app->get('/admin', 'App\Action\Admin\HomeAction:index')->add(App\Middleware\Admin\AuthMiddleware::class);
 
 
 
