@@ -15,6 +15,7 @@ CREATE TABLE public.data_frames (
                 id INTEGER NOT NULL,
                 user_id INTEGER NOT NULL,
                 data VARCHAR NOT NULL,
+                titulo VARCHAR NOT NULL,
                 meta_data VARCHAR NOT NULL,
                 created_at TIMESTAMP NOT NULL,
                 updated_at TIMESTAMP,

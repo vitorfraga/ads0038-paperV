@@ -1,0 +1,18 @@
+
+<?=include_once"inc/header.phtml" ?>
+  <?php 
+    error_reporting(E_ALL);
+    if(isset($page)){
+      
+      include_once $page.".phtml";
+      
+
+    }else{
+      
+
+    }
+
+
+   ?>
+
+<?=include_once"inc/footer.phtml" ?>
