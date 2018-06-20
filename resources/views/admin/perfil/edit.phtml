@@ -1,0 +1,37 @@
+
+  
+  	
+    <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <center><h1>Meu perfil</h1></center>
+  <div class="panel-body">
+    
+  </div>
+
+  <?php 
+
+	if(isset($sucesso)){
+		echo 'Conta criada com sucesso';
+
+	}
+
+ ?>
+
+  <div class="cadastro_">
+	<br /><br />
+	<center><form name="formulario" id="formulario_cadastro" action="" method="post">
+		<label>Nome: </label> <input type="text" name="nome" value="" size="45" maxlength="150" /><br /> 
+		<label>E-mail: </label> <input type="text" name="email" value="" size="45" maxlength="150" /> <br />
+		<label>Senha </label> <input type="password" name="senha" value="" size="45" maxlength="150" /><br />
+		<input type="submit" name="botao-cadastrar" value="Alterar">
+		<input type="reset" name="botao-apagar" value="Apagar">
+   </form></center>
+
+
+
+</div>
+ </body>
+</html>
+
+    
+

@@ -16,6 +16,10 @@ $app->group('/admin', function(){
 
 	// DataFrames
 	$this->get('/dataframes', 'App\Action\Admin\DataFrameAction:index');
+	$this->get('/dataframes/add', 'App\Action\Admin\DataFrameAction:add');
+	$this->get('/dataframes/edit', 'App\Action\Admin\DataFrameAction:edit');
+	$this->post('/dataframes/add', 'App\Action\Admin\DataFrameAction:store');
+	$this->get('/perfil', 'App\Action\Admin\PerfilAction:index');
 
 })->add(App\Middleware\Admin\AuthMiddleware::class);
 
