@@ -35,12 +35,18 @@ final class LoginAction extends Action{
 			// exit($sql);
 			$conn = $this->db;
 			// $verificarNoBanco->execute();
-			$nRows = $conn->query($sql)->fetchColumn();
+			$nRows[] = $conn->query($sql)->fetch();
 
-			
+						
 			if($nRows>0){
 				
 				$_SESSION[PREFIX . 'logado']= true;
+				$_SESSION['name']= $nRows[0]['name'];
+				$_SESSION['email'] = $nRows[0]['email'];
+				$_SESSION['id']= $nRows[0]['id'];
+				$_SESSION['password']= $nRows[0]['password'];
+				
+
 				return $response->withRedirect(PATH. '/admin');
 			}else{
 				
@@ -64,6 +70,11 @@ final class LoginAction extends Action{
 	public function logout($request, $response){
 
     	unset($_SESSION[PREFIX . 'logado']);
+		unset($_SESSION['name']);
+		unset($_SESSION['email']);
+		unset($_SESSION['id']);
+		unset($_SESSION['password']);
+
     	session_destroy();
     	return $response->withRedirect(PATH .'/admin/login');
 

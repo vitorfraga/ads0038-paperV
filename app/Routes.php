@@ -1,9 +1,5 @@
 <?php 
 
-
-
-
-
 $app->get('/admin/login', 'App\Action\Admin\LoginAction:index');
 $app->post('/admin/login', 'App\Action\Admin\LoginAction:logar');
 $app->get('/admin/logout', 'App\Action\Admin\LoginAction:logout');

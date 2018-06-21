@@ -29,11 +29,20 @@ final class DataFrameAction extends Action{
 
 	public function store($request, $response){
 
-		$vars['title'] = 'Novo Dataframe';
-		$vars['page'] = 'DataFrame/add';
-    	return $this->view->render($response, 'admin/template.phtml', $vars);
+		$data = $request->getParsedBody();
+		$titulo = filter_var($data['titulo'], FILTER_SANITIZE_STRING);
+		$dataframe = filter_var($data['dataframe'], FILTER_SANITIZE_STRING);
+		$titulo ='ok';
+		$data = 'ok';
+		$data = now();
+	
 
-    	
+		$sql = "INSERT INTO data_frames(titulo, data)VALUES('$titulo','$data')";
+		// exit($sql);
+		$conn = $this->db;
+		// $verificarNoBanco->execute();
+		$nRows = $conn->query($sql)->fetchColumn();
+		
 
 	}
 
