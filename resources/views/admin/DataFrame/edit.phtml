@@ -6,18 +6,19 @@
   <div class="panel-heading">Alterar Dataframe | <a href="<?= PATH ?>/admin/dataframes">Voltar</a></div>
   <div class="panel-body">
 
-	  <form >
-	  <div class="form-group">
-	    <label for="exampleInputEmail1">Titulo</label>
-	    <input value = "<?= $data[0]['titulo']?>"type="text" class="form-control" id="exampleInputEmail1" placeholder="Titulo">
-	  </div>
-	 
-	  <div class="form-group">
-	    <label for="exampleInputFile">Inserir Dataframe</label>
-	    <input type="file" id="exampleInputFile">
-	    <p class="help-block">Inserir Arquivo no formato CSV</p>
-	  </div>
-	  <button type="submit" class="btn btn-default">Salvar</button>
+	  <form  action="<?= PATH?>/admin/dataframes/edit/<?=  $data[$i]['id']  ?>" method="post">
+	  	<input type="hidden" name="_METHOD" value="DELETE"/>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Titulo</label>
+		    <input value = "<?= $data[0]['titulo']?>"type="text" class="form-control" id="exampleInputEmail1" placeholder="Titulo">
+		  </div>
+		 
+		  <div class="form-group">
+		    <label for="exampleInputFile">Inserir Dataframe</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Inserir Arquivo no formato CSV</p>
+		  </div>
+		  <button type="submit" class="btn btn-default">Salvar</button>
 	</form>
     
   </div>
