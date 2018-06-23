@@ -1,8 +1,10 @@
 <?php 
-
+error_reporting(E_ALL);
 $app->get('/admin/login', 'App\Action\Admin\LoginAction:index');
 $app->post('/admin/login', 'App\Action\Admin\LoginAction:logar');
 $app->get('/admin/logout', 'App\Action\Admin\LoginAction:logout');
+
+$app->post('/perfil', 'App\Action\Admin\PerfilAction:store');
 
 // Administração
 $app->group('/admin', function(){
@@ -11,11 +13,26 @@ $app->group('/admin', function(){
 	$this->get('', 'App\Action\Admin\HomeAction:index');
 
 	// DataFrames
-	$this->get('/dataframes', 'App\Action\Admin\DataFrameAction:index');
+
+	// Rotas HTML
+	
 	$this->get('/dataframes/add', 'App\Action\Admin\DataFrameAction:add');
-	$this->get('/dataframes/edit', 'App\Action\Admin\DataFrameAction:edit');
-	$this->post('/dataframes/add', 'App\Action\Admin\DataFrameAction:store');
-	$this->get('/perfil', 'App\Action\Admin\PerfilAction:index');
+	$this->get('/dataframes/edit/{id}', 'App\Action\Admin\DataFrameAction:edit');
+
+	// Rotas API/BANCO
+	$this->get('/dataframes', 'App\Action\Admin\DataFrameAction:index');// Lista os Dataframes
+	$this->put('/dataframes/edit/{id}', 'App\Action\Admin\DataFrameAction:update'); //Altera o Dataframe
+	$this->delete('/dataframes/delete/{id}', 'App\Action\Admin\DataFrameAction:delete'); //Altera o Dataframe
+	$this->post('/dataframes/add', 'App\Action\Admin\DataFrameAction:store')// Cria um dataframe;
+
+
+	// Perfil
+
+	// Rotas HTML
+	$this->get('/perfil', 'App\Action\Admin\PerfilAction:index') // Entra na página de perfil;
+
+	// Rotas API/Banco
+	$this->put('/perfil', 'App\Action\Admin\PerfilAction:edit')// Edita o perfil;
 
 })->add(App\Middleware\Admin\AuthMiddleware::class);
 

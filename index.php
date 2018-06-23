@@ -1,5 +1,6 @@
 <?php 
 session_start();
+error_reporting(E_ALL);
 require 'vendor/autoload.php';
 require 'config/constants.php';
 require 'config/config.php';

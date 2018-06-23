@@ -20,6 +20,8 @@
   <div class="cadastro_">
 	<br /><br />
 	<center><form name="formulario" id="formulario_cadastro" action="<?= PATH?>/admin/perfil" method="post">
+		
+		<input type="hidden" name="_METHOD" value="PUT"/>
 		<label>Nome: </label> <input type="text" name="name" value="<?=$_SESSION['name']?>" size="45" maxlength="150" /><br /> 
 		<label>E-mail: </label> <input type="text" name="email" value="<?=$_SESSION['email']?>" size="45" maxlength="150" /> <br />
 		<label>Senha </label> <input type="password" name="password" value="<?=$_SESSION['password']?>" size="45" maxlength="150" /><br />

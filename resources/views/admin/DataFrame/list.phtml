@@ -7,8 +7,6 @@
   <div class="panel-body">
     
   </div>
-
-  
   
   	<table class="table"> 
   		<thead>
@@ -20,12 +18,22 @@
   				</tr> 
   		</thead> 
   		<tbody> 
+        <?php
+           for($i = 0; $i < count($data); ++$i) {
+            
+         ?>
   			<tr> 
   				<th scope="row">1</th> 
-  				<td>Titanic</td> 
-  				<td>17/06/2018</td> 
-  				<td><a href="">Analisar | <a href="<?= PATH?>/admin/dataframes/edit">Alterar | </a><a href="">Deletar</a></td> 
-  			</tr> 
+  				<td><?=  $data[$i]['titulo']  ?>  </td> 
+  				<td><?= date('d/m/Y', strtotime($data[$i]['created_at'])); ?> ?></td> 
+  				<td><a href="<?= PATH?>/admin/dataframes/analytic/<?=  $data[$i]['id']  ?>">Analisar | <a href="<?= PATH?>/admin/dataframes/edit/<?=  $data[$i]['id']  ?>" >Alterar | </a><a href="<?= PATH?>/admin/dataframes/delete/<?=  $data[$i]['id']  ?>" >Deletar</a></td> 
+  			</tr>
+
+        <?php 
+            }
+          
+
+         ?> 
   		</tbody> 
   	</table>
     
