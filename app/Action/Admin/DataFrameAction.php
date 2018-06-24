@@ -37,8 +37,7 @@ final class DataFrameAction extends Action{
 		$data = $request->getParsedBody();
 		$titulo = filter_var($data['titulo'], FILTER_SANITIZE_STRING);
 		$dataframe = filter_var($data['data_frame_csv'], FILTER_SANITIZE_STRING);
-		$dataframe = $this->csvtojson($dataframe);
-
+		
 		echo $dataframe;
 		exit;
 
@@ -86,14 +85,6 @@ final class DataFrameAction extends Action{
 	}
 
 
-	public function csvtojson($csv){
-
-		$array = array_map("str_getcsv", explode("\n", $csv));
-		$json = json_encode($array);
-		return $json;
-
-
-	}
 
 
 }

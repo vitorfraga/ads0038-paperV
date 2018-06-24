@@ -7,7 +7,7 @@
 
 
 	  <form  action="<?= PATH ?>/admin/dataframes/add" method="POST">
-  	  <input type="hidden" id="data_frame_csv" name = "data_frame_csv">
+  	  <input type="text" id="data_frame_csv" name = "data_frame_csv" value="llalaal">
 	  <div class="form-group">
 	    <label for="exampleInputEmail1">Titulo</label>
 	    <input name = 'titulo' type="text" class="form-control" id="exampleInputEmail1" placeholder="Titulo">
@@ -41,8 +41,8 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="http://evanplaice.github.io/jquery-csv/src/jquery.csv.min.js"></script>
-   <!--  <script src="<?= PATH ?>/public/js/jquery.csv.min.js"></script>
-  <script src="<?= PATH ?>/public/js/jquery.min.js"></script> -->
+    <script src="<?= PATH ?>/public/js/csvtojson.js"></script>
+  <!-- <script src="<?= PATH ?>/public/js/jquery.min.js"></script> -->
 
 
 

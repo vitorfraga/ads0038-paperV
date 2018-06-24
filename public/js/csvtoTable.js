@@ -53,18 +53,30 @@
       reader.onload = function(event){
         var csv = event.target.result;
         var data = $.csv.toArrays(csv);
-        document.getElementById("data_frame_csv").value = csv;
+        
+
+        try {
+            output = CSV.parse(csv);
+            document.getElementById("data_frame_csv").value =  JSON.stringify(output);
+        } catch (e) {}
+
+
 
         var html = '';
         for(var row in data) {
+
           html += '<tr>\r\n';
           for(var item in data[row]) {
+            
             html += '<td>' + data[row][item] + '</td>\r\n';
+            
           }
           html += '</tr>\r\n';
         }
+        
         $('#contents').html(html);
       };
       reader.onerror = function(){ alert('Unable to read ' + file.fileName); };
     }
+
  
