@@ -35,15 +35,11 @@ final class DataFrameAction extends Action{
 
 		$user_id =  $_SESSION['id']; 
 		$data = $request->getParsedBody();
-		$titulo = filter_var($data['titulo'], FILTER_SANITIZE_STRING);
-		$dataframe = filter_var($data['data_frame_csv'], FILTER_SANITIZE_STRING);
-		
-		echo $dataframe;
-		exit;
-
-		$sql = "INSERT INTO data_frames(titulo, data, user_id,created_at) VALUES (?,?,?,now())";
-	    $conn= $this->db->prepare($sql);
-        $conn->execute([$titulo, $dataframe, $user_id]);
+		$titulo = $_POST['titulo'];
+		$dataframe = $_POST['data_frame_csv'];
+		$sql = "INSERT INTO data_frames(titulo, data, user_id,created_at) VALUES (".$this->db->quote($titulo).",".$this->db->quote($dataframe).",".$this->db->quote($user_id).",now())";
+		$conn= $this->db->prepare($sql);
+        $this->db->exec($conn->queryString);
         $vars['title'] = 'Meus arquivos';
 		$vars['page'] = 'DataFrame/list';
 		return $response->withRedirect(PATH. '/admin/dataframes');
@@ -78,11 +74,52 @@ final class DataFrameAction extends Action{
 
 		$data = $request->getParsedBody();
 		$titulo = filter_var($data['titulo'], FILTER_SANITIZE_STRING);
-		$sql = "UPDATE data_frames SET titulo = ?, updated_at = now() WHERE id=".$args['id'];
-	    $conn= $this->db->prepare($sql);
-        $conn->execute([$titulo]);
+		$dataframe = filter_var($data['data_frame_csv'], FILTER_SANITIZE_STRING);
+		if($dataframe!=''){
+
+			$sql = "UPDATE data_frames SET titulo = ?,dataframe=? ,updated_at = now() WHERE id=".$args['id'];
+	    	$conn= $this->db->prepare($sql);
+        	$conn->execute([$titulo, $DataFrame]);
+
+
+		}else{
+
+			$sql = "UPDATE data_frames SET titulo = ?, updated_at = now() WHERE id=".$args['id'];
+	    	$conn= $this->db->prepare($sql);
+        	$conn->execute([$titulo]);
+
+			
+		}
         return $response->withRedirect(PATH. '/admin/dataframes');
 	}
+
+	public function analytic($request, $response, $args){
+		$user_id = $_SESSION['id'];
+		$sql   = "SELECT * FROM data_frames WHERE user_id =".$user_id."AND id=".$args['id'];
+	   	$conn  = $this->db;
+		$data  = $conn->query($sql)->fetchall();
+		$data  = json_decode($data[0]['data'], true);
+
+		$vars['title'] = 'Analytic';
+		$vars['title'] = 'Análise do arquivo';
+		$vars['page'] = 'DataFrame/view';
+		$vars['matriz'] = $this->matriz($data);
+    	return $this->view->render($response, 'admin/template.phtml', $vars);
+		
+		
+	}
+
+	public function matriz($data){
+
+		$colunas = count($data[0]);
+		$linhas = count($data);
+		$x = ["linhas"=>$linhas, "colunas"=>$colunas];
+		return $x;
+
+
+	}
+
+
 
 
 

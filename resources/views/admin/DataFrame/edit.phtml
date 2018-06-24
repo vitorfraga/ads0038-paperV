@@ -3,7 +3,7 @@
   <div class="panel-body">
     <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Alterar Dataframe | <a href="<?= PATH ?>/admin/dataframes">Voltar</a></div>
+  <div class="panel-heading">Alterar Dataframe | <a class="btn btn-info"  href="<?= PATH ?>/admin/dataframes">Voltar</a></div>
   <div class="panel-body">
 
 	  <form  action="<?= PATH?>/admin/dataframes/edit/<?= $data[0]['id']?>" method="post">
@@ -18,7 +18,7 @@
 		    <input type="file" id="exampleInputFile">
 		    <p class="help-block">Inserir Arquivo no formato CSV</p>
 		  </div>
-		  <button type="submit" class="btn btn-default">Salvar</button>
+		  <button class="btn btn-success" type="submit" class="btn btn-default">Salvar</button>
 	</form>
     
   </div>

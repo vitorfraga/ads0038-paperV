@@ -12,7 +12,9 @@ final class LoginAction extends Action{
 			return $response->withRedirect(PATH. '/admin');
 
 		}
-    	return $this->view->render($response, 'admin/login/login.phtml');
+		$vars['title'] = 'Login';
+		$vars['page'] = 'login';
+    	return $this->view->render($response, 'template.phtml', $vars);
 
     	
 

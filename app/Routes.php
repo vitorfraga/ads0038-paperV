@@ -19,6 +19,7 @@ $app->group('/admin', function(){
 
 	$this->get('/dataframes/add', 'App\Action\Admin\DataFrameAction:add');
 	$this->get('/dataframes/edit/{id}', 'App\Action\Admin\DataFrameAction:edit');
+	$this->get('/dataframes/analytic/{id}', 'App\Action\Admin\DataFrameAction:analytic');
 	$this->delete('/dataframes/delete/{id}', 'App\Action\Admin\DataFrameAction:delete');
 	$this->put('/dataframes/edit/{id}', 'App\Action\Admin\DataFrameAction:update');// Edita o perfil;
 	// // Rotas API/BANCO

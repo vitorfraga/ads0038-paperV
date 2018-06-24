@@ -32,12 +32,7 @@
       var files = evt.target.files; // FileList object
       var file = files[0];
 
-      // read the file metadata
-      var output = ''
-          output += '<span style="font-weight:bold;">' + escape(file.name) + '</span><br />\n';
-          output += ' - FileType: ' + (file.type || 'n/a') + '<br />\n';
-          output += ' - FileSize: ' + file.size + ' bytes<br />\n';
-          output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
+   
 
       // read the file contents
       printTable(file);

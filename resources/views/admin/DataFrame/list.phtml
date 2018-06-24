@@ -3,7 +3,7 @@
   	
     <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Meus DataFrames | <a href="<?= PATH?>/admin/dataframes/add">Adicionar</a></div>
+  <div class="panel-heading">Meus DataFrames | <a  class="btn btn-primary" href="<?= PATH?>/admin/dataframes/add">Adicionar</a></div>
   <div class="panel-body">
     
   </div>
@@ -23,15 +23,15 @@
             
          ?>
   			<tr> 
-  				<th scope="row">1</th> 
+  				<th scope="row"><?=  $data[$i]['id']  ?></th> 
   				<td><?=  $data[$i]['titulo']  ?>  </td> 
   				<td><?= date('d/m/Y', strtotime($data[$i]['created_at'])); ?></td> 
-  				<td><a href="<?= PATH?>/admin/dataframes/analytic/<?=  $data[$i]['id']  ?>">Analisar | 
-              <a href="<?= PATH?>/admin/dataframes/edit/<?=  $data[$i]['id']  ?>" >Alterar | </a>
-              <form action="<?= PATH?>/admin/dataframes/delete/<?=  $data[$i]['id']  ?>" method="post">
-    
+  				<td style="float:left;">
+              <a class="btn btn-success"  style = "margin-right: 3px;" href="<?= PATH?>/admin/dataframes/analytic/<?=  $data[$i]['id']  ?>">Analisar  
+              <a  class="btn btn-info"  style = "margin-right: 3px;" href="<?= PATH?>/admin/dataframes/edit/<?=  $data[$i]['id']  ?>" >Alterar </a>
+              <form style = "float:left; margin-right: 3px;" action="<?= PATH?>/admin/dataframes/delete/<?=  $data[$i]['id']  ?>" method="post">
                 <input type="hidden" name="_METHOD" value="DELETE"/>
-                <input type="submit" value="Deletar"></input>
+                <input class="btn btn-danger" type="submit" value="Deletar"></input>
               </form> 
 
             </td>
