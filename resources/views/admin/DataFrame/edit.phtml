@@ -6,11 +6,11 @@
   <div class="panel-heading">Alterar Dataframe | <a href="<?= PATH ?>/admin/dataframes">Voltar</a></div>
   <div class="panel-body">
 
-	  <form  action="<?= PATH?>/admin/dataframes/edit/<?=  $data[$i]['id']  ?>" method="post">
-	  	<input type="hidden" name="_METHOD" value="DELETE"/>
+	  <form  action="<?= PATH?>/admin/dataframes/edit/<?= $data[0]['id']?>" method="post">
+	  	<input type="hidden" name="_METHOD" value="PUT"/>
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Titulo</label>
-		    <input value = "<?= $data[0]['titulo']?>"type="text" class="form-control" id="exampleInputEmail1" placeholder="Titulo">
+		    <input name = 'titulo' value = "<?= $data[0]['titulo']?>"type="text" class="form-control" id="exampleInputEmail1" placeholder="Titulo">
 		  </div>
 		 
 		  <div class="form-group">
