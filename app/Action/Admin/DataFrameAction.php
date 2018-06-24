@@ -36,7 +36,12 @@ final class DataFrameAction extends Action{
 		$user_id =  $_SESSION['id']; 
 		$data = $request->getParsedBody();
 		$titulo = filter_var($data['titulo'], FILTER_SANITIZE_STRING);
-		$dataframe = filter_var($data['dataframe'], FILTER_SANITIZE_STRING);
+		$dataframe = filter_var($data['data_frame_csv'], FILTER_SANITIZE_STRING);
+		$dataframe = $this->csvtojson($dataframe);
+
+		echo $dataframe;
+		exit;
+
 		$sql = "INSERT INTO data_frames(titulo, data, user_id,created_at) VALUES (?,?,?,now())";
 	    $conn= $this->db->prepare($sql);
         $conn->execute([$titulo, $dataframe, $user_id]);
@@ -78,6 +83,16 @@ final class DataFrameAction extends Action{
 	    $conn= $this->db->prepare($sql);
         $conn->execute([$titulo]);
         return $response->withRedirect(PATH. '/admin/dataframes');
+	}
+
+
+	public function csvtojson($csv){
+
+		$array = array_map("str_getcsv", explode("\n", $csv));
+		$json = json_encode($array);
+		return $json;
+
+
 	}
 
 
